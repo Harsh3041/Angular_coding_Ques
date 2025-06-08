@@ -1,0 +1,8 @@
+<div *ngIf="secondsLeft$ | async as secondsLeft">
+<ng-container *ngIf="secondsLeft > 0; else reached">
+Seconds left to deadline : {{secondsLeft}}
+</ng-container>
+<ng-template #reached>
+ Deadline has been reached
+</ng-template>
+</div>
